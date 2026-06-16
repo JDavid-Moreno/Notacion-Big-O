@@ -1,6 +1,6 @@
 # Análisis de complejidad y notación Big O
 
-El análisis de complejidad busca medir cómo crece el costo de un algoritmo al aumentar el tamaño de la entrada, denotado como $n$. Este costo se mide generalmente en tiempo de ejecución o memoria utilizada. No nos interesa conocer la duración exacta en segundos, ya que depende del hardware disponible, sino entender cómo escala el algoritmo conforme el problema crece en magnitud.
+El análisis de complejidad busca medir cómo crece el costo de un algoritmo al aumentar el tamaño de la entrada, denotado como `n`. Este costo se mide generalmente en tiempo de ejecución o memoria utilizada. No nos interesa conocer la duración exacta en segundos, ya que depende del hardware disponible, sino entender cómo escala el algoritmo conforme el problema crece en magnitud.
 
 Por ejemplo, si duplicar el tamaño de los datos implica duplicar también el trabajo, nos referimos a un crecimiento lineal. Si duplicar los datos cuadruplica el trabajo, hablamos de crecimiento cuadrático.
 
