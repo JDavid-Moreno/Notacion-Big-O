@@ -12,7 +12,7 @@ Por esta razón se creó la notación Big O, que nos permite clasificar la compl
 
 ## Tipos de complejidades
 
-### Constante O(1)
+### Constante $O(1)$
 
 Un algoritmo de complejidad constante realiza siempre la misma cantidad de operaciones, independientemente del tamaño de la entrada. En otras palabras, el tiempo de ejecución no cambia si el arreglo contiene 10 o 10 millones de elementos; siempre se realiza una única operación.
 
@@ -27,7 +27,7 @@ Aunque el arreglo contenga miles o millones de elementos, el tiempo de ejecució
 
 ---
 
-### Logarítmica O(log(n))
+### Logarítmica $O(log(n))$
 
 El algoritmo reduce significativamente el tamaño del problema en cada iteración. El ejemplo más común es eliminar la mitad de los elementos restantes, de modo que cada iteración trabaja con una versión mucho más pequeña del problema.
 
@@ -42,7 +42,7 @@ while n > 1:
 
 ---
 
-### Lineal O(n)
+### Lineal $O(n)$
 
 En un recorrido lineal, cada iteración procesa un elemento más. Es decir, si hay 10 elementos se realizarán 10 iteraciones; si hay 100 elementos, se realizarán 100 iteraciones, y así sucesivamente.
 
@@ -59,7 +59,7 @@ for num in array:
 
 **NOTA:** Generalmente, se asume que los ciclos `for` tienen complejidad O(n) y los ciclos `while` tienen complejidad O(log n). Sin embargo, esto no es necesariamente cierto. Por ejemplo, los ciclos `while` pueden ser O(n):
 
-```python
+```
 n = 10
 i = 0
 while i < n:
@@ -67,7 +67,7 @@ while i < n:
     i += 1
 ```
 
-Este ciclo se itera n veces, por lo que su complejidad es O(n). Para determinar la complejidad de un ciclo `while`, es necesario revisar cuál es la condición y cuántas veces se ejecuta: n veces, log(n) veces, etc.
+Este ciclo se iteran veces, por lo que su complejidad es O(n). Para determinar la complejidad de un ciclo `while`, es necesario revisar cuál es la condición y cuántas veces se ejecuta: n veces, log(n) veces, etc.
 
 Por otro lado, los ciclos `for` en Python prácticamente siempre son O(n), debido a que Python itera sobre una secuencia completa y fija. Las únicas excepciones son aquellas que utilizan una cantidad log(n) de elementos, como:
 
@@ -79,13 +79,13 @@ for i in range(int(math.log2(n)) + 1):
 
 ---
 
-### O(n log(n))
+### $O(n log(n))$
 
 El algoritmo divide repetidamente el problema en partes más pequeñas y, además, en cada nivel de división debe procesar todos los elementos. Un ejemplo muy conocido es `Merge Sort`, ya que cada división genera aproximadamente `log(n)` niveles y en cada nivel se procesan `n` elementos.
 
 ---
 
-### Cuadrática O(n²)
+### Cuadrática $O(n²)$
 
 El algoritmo compara o procesa cada elemento con todos los demás, de modo que cada recorrido externo provoca otro recorrido completo interno.
 
@@ -103,7 +103,7 @@ Aquí se recorre la lista de dos formas anidadas: los 3 elementos se recorren 2 
 
 ---
 
-### Cúbica O(n³)
+### Cúbica $O(n³)$
 
 El algoritmo realiza tres recorridos anidados, generando un crecimiento cúbico en el número de operaciones.
 
@@ -120,7 +120,7 @@ for i in array:
 
 ---
 
-### Exponencial O(2ⁿ)
+### Exponencial $O(2^n)$
 
 Cada solución genera múltiples subproblemas nuevos, haciendo que el número de operaciones se duplique repetidamente.
 
@@ -128,7 +128,7 @@ Un ejemplo clásico es el problema de Fibonacci utilizando recursión, el cual s
 
 ---
 
-### Factorial O(n!)
+### Factorial $O(n!)$
 
 Significa que el algoritmo prueba todas las posibles formas de ordenar o acomodar los elementos.
 
@@ -177,9 +177,9 @@ def suma_numeros(array):
         total += array[i]           # O(1) por iteración
     return total                    # O(1)
 ```
-Todo dentro de un for que sea constante seguira siendo O(n), ya que todo dentro de un arreglo se multiplica por a complejidad de dicho ciclo, por lo que si solo hay constantes la complejidad se queda en O(n)
+Todo dentro de un for que sea constante seguirá siendo O(n), ya que todo dentro de un arreglo se multiplica por a complejidad de dicho ciclo, por lo que si solo hay constantes la complejidad se queda en O(n)
 
-por lo que queda: O(1) + O(n) + O(1) = O(n)
+Por lo que queda: O(1) + O(n) + O(1) = O(n)
 
 ---
 
@@ -218,7 +218,7 @@ def buscar_y_contar(array, target):
     
     return encontrado                # O(1)
 ```
-En caso de existir dos ciclos separados o no anidados, osea en forma de secuencia (uno y despues el otro), estos al igual que cualquier analisis de lineas, estos se suman y como O(n) + O(n) = O(2n), y como las constantes se ignoran esto sigue siendo de complejidad O(n)
+En caso de existir dos ciclos separados o no anidados, o sea en forma de secuencia (uno y después el otro), estos al igual que cualquier análisis de líneas, estos se suman y como O(n) + O(n) = O(2n), y como las constantes se ignoran esto sigue siendo de complejidad O(n)
 
 Por lo que queda: O(1) + O(n) + O(1) + O(n) + O(1) = O(n) + O(n) = O(n)
 
@@ -242,7 +242,7 @@ def factorial(n):
 
 Hay `n` llamadas en total (una para cada número de n a 1), y cada una realiza `O(1)` de trabajo.
 
-Por lo que su complejidad seria de n × O(1) = O(n)
+Por lo que su complejidad sería de n × O(1) = O(n)
 
 ---
 
@@ -261,7 +261,7 @@ Cada llamada a su vez realiza dos llamadas, esto hasta 1, lo que hace que el tra
 
 ## Análisis de Complejidad de los Algoritmos de Ordenamiento
 
-### O(n²) - Complejidad Cuadrática
+### $O(n²)$ - Complejidad Cuadrática
 
 ### Bubble Sort
 
@@ -280,7 +280,7 @@ def bubblesort(array):
 Bubble Sort tiene dos bucles anidados que recorren el arreglo:
 
 1. El bucle externo (`for i in range(n)`) itera `n` veces.
-2. El bucle interno (`for j in range(0, n-i-1)`) también itera aproximadamente `n` veces en cada iteración del bucle externo, aunque este reduce la cantidad que itera cada vez, no llega a ser un bajon significativo lo que no la hace O(nlog n).
+2. El bucle interno (`for j in range(0, n-i-1)`) también itera aproximadamente `n` veces en cada iteración del bucle externo, aunque este reduce la cantidad que itera cada vez, no llega a ser un bajón significativo lo que no la hace O(nlog n).
 
 ### Insertion Sort
 
@@ -330,7 +330,7 @@ Selection Sort también tiene dos bucles anidados:
 
 ---
 
-## O(n log n) 
+## $O(n log n)$ 
 
 ### Merge Sort
 
@@ -367,7 +367,7 @@ def merge_sort(left, right):
 
 Merge Sort divide el problema de manera recursiva y luego combina los resultados:
 
-1. El arreglo se divide por la mitad repetidamente hasta obtener subarreglos de un elemento. Esto ocurre `log(n)` veces:
+1. El arreglo se divide por la mitad repetidamente hasta obtener sub arreglos de un elemento. Esto ocurre `log(n)` veces:
 
 2. En cada nivel, todos los elementos deben compararse y combinarse. Esta operación toma `O(n)` tiempo en total para cada nivel.
 
