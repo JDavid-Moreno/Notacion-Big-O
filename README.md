@@ -153,6 +153,8 @@ Es decir, 3! = 3 × 2 × 1 = 6.
 
 Con una cantidad muy pequeña de elementos esto no es tan grave, pero crece demasiado rápido. Por ejemplo, si realizamos lo mismo con 10 elementos, hay más de 3 millones de posibilidades.
 
+https://github.com/user-attachments/assets/86e07d6c-f8b6-4e54-aebe-06204b05321e
+
 ---
 
 ## Como calcular la complejidad de un algoritmo
